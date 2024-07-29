@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { GoPerson, GoHome, GoHeart, GoPencil, GoSearch } from 'react-icons/go';
+import { GoPerson, GoHome, GoPencil, GoSearch } from 'react-icons/go';
 
 const HomeNavbar = () => {
   const { data: session } = useSession();
@@ -12,7 +12,7 @@ const HomeNavbar = () => {
   if (session && session.user)
     return (
       <div className="flex flex-col min-h-screen justify-between">
-        <div className="flex w-full justify-end px-8 md:justify-around  items-center gap-3 py-4 fixed z-10">
+        <div className="flex w-full justify-end px-8 md:justify-around bg-slate-900  items-center gap-3 py-4 fixed z-10">
           <Link href={'/home'} className=" hidden md:block md:relative  h-16 w-16  md:h-[60px] md:w-[60px]  ">
             <Image src="/images/logo.png" fill alt="logo" />
           </Link>
@@ -23,13 +23,10 @@ const HomeNavbar = () => {
             <Link href={'/home/search'} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoSearch />
             </Link>
-            <Link href={'/home/post'} className="text-white/50 hover:text-white transition-colors text-4xl">
+            <Link href={'/home/create-post'} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoPencil />
             </Link>
-            <Link href={'/home/activities'} className="text-white/50 hover:text-white transition-colors text-4xl">
-              <GoHeart />
-            </Link>
-            <Link href={`/home/user/${session.user.id}`} className="text-white/50 hover:text-white transition-colors text-4xl">
+            <Link href={`/home/profile/${session.user.id}`} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoPerson />
             </Link>
           </div>
@@ -39,7 +36,7 @@ const HomeNavbar = () => {
             </Link>
           </div>
         </div>
-        <footer className="py-4 md:hidden w-full mt-auto ml-7">
+        <footer className="py-4 md:hidden  mt-auto  pl-16 w-[500px] bg-slate-900">
           <div className="flex  gap-10 ">
             <Link href={'/home'} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoHome />
@@ -47,11 +44,8 @@ const HomeNavbar = () => {
             <Link href={'/home/search'} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoSearch />
             </Link>
-            <Link href={'/home/post'} className="text-white/50 hover:text-white transition-colors text-4xl">
+            <Link href={'/home/create-post'} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoPencil />
-            </Link>
-            <Link href={'/home/activities'} className="text-white/50 hover:text-white transition-colors text-4xl">
-              <GoHeart />
             </Link>
             <Link href={`/home/user/${session.user.id}`} className="text-white/50 hover:text-white transition-colors text-4xl">
               <GoPerson />

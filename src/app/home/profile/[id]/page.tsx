@@ -1,14 +1,9 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import User from '@/components/shared-components/user/User';
+import Profile from '@/components/shared-components/Profile';
 import { getGame, getUser } from '@/lib/data';
 import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query';
 import { getServerSession } from 'next-auth';
 import React from 'react';
-
-export const metadata = {
-  title: 'User',
-  description: 'UWKS.MABAR User page',
-};
 
 type Props = {
   params: {
@@ -16,7 +11,12 @@ type Props = {
   };
 };
 
-const UserPage = async (props: Props) => {
+export const metadata = {
+  title: 'User',
+  description: 'UWKS.MABAR User page',
+};
+
+const ProfilePage = async (props: Props) => {
   const session = await getServerSession(authOptions);
 
   if (!session) {
@@ -40,9 +40,9 @@ const UserPage = async (props: Props) => {
   const game = queryClient.getQueryData(['game', props.params.id]);
   return (
     <HydrationBoundary state={dehydratedState}>
-      <User user={user} session={session} games={game} />
+      <Profile user={user} session={session} games={game} />
     </HydrationBoundary>
   );
 };
 
-export default UserPage;
+export default ProfilePage;

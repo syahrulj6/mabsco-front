@@ -22,6 +22,21 @@ export async function getUser(id: string | undefined, accessToken: string | unde
   return res.data;
 }
 
+export const fetchUsersByName = async (name: string) => {
+  const { data } = await instance.get(`/users/search?name=${name}`);
+  return data;
+};
+
+export const patchUser = async (userId: string, data: { name?: string; bio?: string }) => {
+  try {
+    const response = await instance.patch(`users/${userId}`, data);
+    return response.data;
+  } catch (error) {
+    console.error('Error updating user:', error);
+    throw new Error('Failed to update user');
+  }
+};
+
 // POST
 export async function getAllPost() {
   const res = await instance.get('posts');
@@ -33,6 +48,11 @@ export async function getAllPost() {
   });
 
   return sortedPosts;
+}
+
+export async function getAllPostByAuthorId(authorId: string) {
+  const res = await instance.get(`posts/author/${authorId}`);
+  return res.data;
 }
 
 export async function getPost(id: string) {
@@ -50,7 +70,25 @@ export async function createPost(authorId: string, title: string) {
   return res.data;
 }
 
+export async function deletePost(postId: String) {
+  try {
+    const response = await instance.delete(`posts/${postId}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error deleting post:', error);
+    throw new Error('Failed to delete post');
+  }
+}
+
+// GAME
 export async function getGame(userId: string) {
   const res = await instance.get(`game/${userId}`);
+  return res.data;
+}
+
+// COMMENTS
+export async function getCommentsByPostId(postId: string) {
+  const res = await instance.get(`posts/${postId}/comments`);
+
   return res.data;
 }

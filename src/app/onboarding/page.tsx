@@ -1,9 +1,12 @@
 import { OnboaringForm } from '@/components/auth/onboarding-form';
 import { getUser } from '@/lib/data';
 import { getServerSession } from 'next-auth';
-
-import React from 'react';
 import { authOptions } from '../api/auth/[...nextauth]/route';
+
+export const metadata = {
+  title: 'Onboarding',
+  description: 'UWKS.MABAR Onboarding page',
+};
 
 const OnboardingPage = async () => {
   const session = await getServerSession(authOptions);

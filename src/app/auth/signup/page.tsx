@@ -1,5 +1,9 @@
 import { SignUpForm } from '@/components/auth/sign-up-form';
-import React from 'react';
+
+export const metadata = {
+  title: 'Sign-Up',
+  description: 'UWKS.MABAR Sign-Up page',
+};
 
 const SigUpPage = () => {
   return (

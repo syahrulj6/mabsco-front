@@ -1,5 +1,10 @@
 import { GameForm } from '@/components/auth/gameForm';
 
+export const metadata = {
+  title: 'Games',
+  description: 'UWKS.MABAR Fill Games page',
+};
+
 const GameDetails = () => {
   return (
     <div className="min-h-screen w-full flex justify-center items-center">

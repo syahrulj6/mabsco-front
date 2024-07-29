@@ -1,14 +1,3 @@
-export type Post = {
-  id: string;
-  createdAt: Date;
-  updateAt: Date;
-  title: string;
-  author: User;
-  authorId: string;
-  comments: Array<Comments>;
-  likes: Array<Likes>;
-};
-
 enum GameTitle {
   VALORANT,
   MOBILE_LEGENDS,
@@ -28,6 +17,7 @@ export type User = {
   email: string;
   name: string;
   bio: string;
+  image: string;
   onboarded: boolean;
   posts: Array<Post>;
   profile: Profile;
@@ -36,24 +26,42 @@ export type User = {
   likes: Array<Likes>;
 };
 
-export type Comments = {
+export interface Post {
+  id: string;
+  title: string;
+  createdAt: Date;
+  updatedAt: Date;
+  authorId: string;
+  author: {
+    id: string;
+    name: string;
+    image: string;
+  };
+  comments: Comment[];
+  likes: Like[];
+  likesCount: number;
+  likedByCurrentUser: boolean;
+}
+
+export interface Comment {
   id: string;
   content: string;
   createdAt: Date;
-  post: Array<Post>;
   postId: string;
-  author: Array<User>;
+  author: {
+    id: string;
+    name: string;
+    image: string;
+  };
   authorId: string;
-};
+}
 
-export type Likes = {
+export interface Like {
   id: string;
-  createdAt: Date;
-  post: Array<Post>;
+  createdAt: string;
   postId: string;
-  user: Array<User>;
   userId: string;
-};
+}
 // types.ts
 export interface CustomToken {
   user: {

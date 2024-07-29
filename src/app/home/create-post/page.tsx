@@ -1,9 +1,14 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import Post from '@/components/shared-components/CreatePost';
+import Post from '@/components/shared-components/post/CreatePost';
 import { getServerSession } from 'next-auth';
 import { CgDanger } from 'react-icons/cg';
 
-const PostPage = async () => {
+export const metadata = {
+  title: 'Create Post',
+  description: 'UWKS.MABAR Create Post page',
+};
+
+const CreatePostPage = async () => {
   const session = await getServerSession(authOptions);
 
   return (
@@ -17,4 +22,4 @@ const PostPage = async () => {
   );
 };
 
-export default PostPage;
+export default CreatePostPage;
