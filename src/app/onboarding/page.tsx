@@ -11,14 +11,6 @@ export const metadata = {
 const OnboardingPage = async () => {
   const session = await getServerSession(authOptions);
 
-  const userId = session?.user.id.toString();
-
-  const user = await getUser(userId, session?.backendTokens.accessToken);
-
-  // if (user.onboarded) {
-  //   return <Redirect />;
-  // }
-
   return (
     <div className="min-h-screen w-full flex justify-center items-center">
       <div className="flex w-2/4  bg-secondary py-12 px-12 rounded-lg gap-7">

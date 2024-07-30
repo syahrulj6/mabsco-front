@@ -26,7 +26,7 @@ const CommentsList = ({ postId }: { postId: string }) => {
 
   if (session && session.user)
     return (
-      <div className="mt-4 md:px-4 w-full flex flex-col gap-5">
+      <div className=" md:px-4 w-full flex flex-col gap-5">
         {comments.map((comment: Comment) => (
           <div key={comment.id} className="flex gap-2 w-full justify-between items-start">
             <div className="flex gap-2 w-full">
@@ -35,7 +35,7 @@ const CommentsList = ({ postId }: { postId: string }) => {
               </Link>
               <div className="flex flex-col gap-2 items-centers">
                 <Link href={session.user.id.toString() == comment.authorId ? `/home/profile/${comment.authorId}` : `/home/user/${comment.authorId}`}>
-                  <p className="md:text-base text-sm font-bold">{comment.author.name}</p>
+                  <p className="md:text-base text-sm font-bold text-main">{comment.author.name}</p>
                 </Link>
                 <p className="text-sm text-gray-400">{comment.content}</p>
               </div>

@@ -1,6 +1,5 @@
-import axios, { AxiosResponse, AxiosRequestConfig, RawAxiosRequestHeaders } from 'axios';
+import axios from 'axios';
 import { Backend_URL } from './Constant';
-import { Post } from './types';
 
 const instance = axios.create({
   baseURL: Backend_URL,
@@ -90,5 +89,11 @@ export async function getGame(userId: string) {
 export async function getCommentsByPostId(postId: string) {
   const res = await instance.get(`posts/${postId}/comments`);
 
+  return res.data;
+}
+
+// ACTIVITIES
+export async function getActivitiesByUserId(userId: string | undefined) {
+  const res = await instance.get(`activities/user/${userId}`);
   return res.data;
 }

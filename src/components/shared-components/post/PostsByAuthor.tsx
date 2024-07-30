@@ -10,8 +10,10 @@ import { Button } from '@/components/ui/button';
 import { MdDelete } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useSession } from 'next-auth/react';
 
 const PostsByAuthor = ({ authorId }: { authorId: string }) => {
+  const { data: session } = useSession();
   const queryClient = useQueryClient();
 
   const {
@@ -67,18 +69,20 @@ const PostsByAuthor = ({ authorId }: { authorId: string }) => {
               <div className="flex gap-2 items-center">
                 <h3 className="text-lg text-main font-bold">{post.author.name}</h3>
                 <span className="text-gray-400">{formatDateToIndonesian(post.createdAt)}</span>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger>
-                      <Button onClick={() => handleDelete(post.id)}>
-                        <MdDelete className="w-6 h-6 text-red-500 hover:text-red-600 transition-colors duration-150" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent className="bg-red-400">
-                      <p className="text-red-600">Delete Post</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                {session?.user.id.toString() === post.author.id && (
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Button onClick={() => handleDelete(post.id)}>
+                          <MdDelete className="w-6 h-6 text-red-500 hover:text-red-600 transition-colors duration-150" />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-red-400">
+                        <p className="text-red-600">Delete Post</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                )}
               </div>
               <p className="text-main text-lg">{post.title}</p>
             </div>

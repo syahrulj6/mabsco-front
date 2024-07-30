@@ -4,6 +4,7 @@ import React from 'react';
 import { CiShare2 } from 'react-icons/ci';
 import { FaRegComments } from 'react-icons/fa6';
 import { CommentsForm } from '@/components/shared-components/comment/commentsForm';
+import CommentsList from '../comment/CommentList';
 
 const Post = ({ post }: any) => {
   return (
@@ -27,6 +28,11 @@ const Post = ({ post }: any) => {
         </button>
       </div>
       <CommentsForm postId={post.id} />
+
+      <div className="flex flex-col gap-2 mt-4 ">
+        <p className="text-main text-lg md:text-xl">Comments</p>
+        <CommentsList postId={post.id} />
+      </div>
     </div>
   );
 };

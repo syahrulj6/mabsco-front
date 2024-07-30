@@ -60,7 +60,7 @@ const Profile = ({ user, games }: any) => {
                   )}
                   {game.gameTitle === 'MOBILE_LEGENDS' && (
                     <div className="relative h-12 w-12 md:h-16 md:w-16 -z-10">
-                      <Image src="/images/ml-logo.png" fill alt="logo" className="rounded-full" />
+                      <Image src="/images/ml-logo.jpg" fill alt="logo" className="rounded-full object-contain" />
                     </div>
                   )}
                   <div className="flex flex-col md:gap-2">

@@ -56,6 +56,15 @@ export interface Comment {
   authorId: string;
 }
 
+export interface Activities {
+  id: string;
+  message: string;
+  createdAt: Date;
+  postId: string;
+  userId: string;
+  post: Post;
+}
+
 export interface Like {
   id: string;
   createdAt: string;
