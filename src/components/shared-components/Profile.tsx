@@ -55,12 +55,22 @@ const Profile = ({ user, games }: any) => {
                 <div className="flex gap-2" key={game.id}>
                   {game.gameTitle === 'VALORANT' && (
                     <div className="relative h-12 w-12 md:h-16 md:w-16 -z-10">
-                      <Image src="/images/valorant-logo.png" fill alt="logo" className="rounded-full" />
+                      <Image src="/images/valorant-logo.png" fill alt="logo" className="rounded-full object-contain" />
                     </div>
                   )}
                   {game.gameTitle === 'MOBILE_LEGENDS' && (
                     <div className="relative h-12 w-12 md:h-16 md:w-16 -z-10">
                       <Image src="/images/ml-logo.jpg" fill alt="logo" className="rounded-full object-contain" />
+                    </div>
+                  )}
+                  {game.gameTitle === 'FREE_FIRE' && (
+                    <div className="relative h-12 w-12 md:h-16 md:w-16">
+                      <Image src="/images/ff-logo.jpg" fill alt="FREE FIRE Logo" className="rounded-full object-contain" />
+                    </div>
+                  )}
+                  {game.gameTitle === 'PUBGM' && (
+                    <div className="relative h-12 w-12 md:h-16 md:w-16">
+                      <Image src="/images/pubgm-logo.png" fill alt="PUBGM Logo" className="rounded-full object-contain" />
                     </div>
                   )}
                   <div className="flex flex-col md:gap-2">

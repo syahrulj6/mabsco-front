@@ -2,7 +2,11 @@ import { formatDateToIndonesian } from '@/lib/Constant';
 import { Activities } from '@/lib/types';
 import Link from 'next/link';
 
-const Activites = ({ activities, user }: { activities: any; user: any }) => {
+const Activites = ({ activities }: { activities: any }) => {
+  if (!activities || activities.length === 0) {
+    return <div className="flex min-h-screen justify-center items-center text-main">Anda belum memiliki pesan</div>;
+  }
+
   return (
     <div className="flex w-full min-h-screen flex-col px-12 mt-32 md:px-60 md:mt-36">
       {activities.map((activity: Activities) => (

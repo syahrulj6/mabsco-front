@@ -84,6 +84,8 @@ export const GameForm = () => {
                       <SelectContent className="">
                         <SelectItem value={GAMES.VALORANT}>VALORANT</SelectItem>
                         <SelectItem value={GAMES.MOBILE_LEGENDS}>MOBILE LEGENDS</SelectItem>
+                        <SelectItem value={GAMES.FREE_FIRE}>FREE FIRE</SelectItem>
+                        <SelectItem value={GAMES.PUBGM}>PUBG MOBILE</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />

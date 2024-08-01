@@ -28,6 +28,8 @@ export const ResetPasswordSchema = z
 export enum GAMES {
   VALORANT = 'VALORANT',
   MOBILE_LEGENDS = 'MOBILE_LEGENDS',
+  FREE_FIRE = 'FREE_FIRE',
+  PUBGM = 'PUBGM',
 }
 
 export const ProfileSchema = z.object({
