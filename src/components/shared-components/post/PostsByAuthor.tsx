@@ -67,8 +67,8 @@ const PostsByAuthor = ({ authorId }: { authorId: string }) => {
             <img src={post.author.image} alt="User" className="rounded-full md:w-14 md:h-14 w-10 h-10" />
             <div className="flex flex-col">
               <div className="flex gap-2 items-center">
-                <h3 className="text-lg text-main font-bold">{post.author.name}</h3>
-                <span className="text-gray-400">{formatDateToIndonesian(post.createdAt)}</span>
+                <h3 className="text-base md:text-lg text-main font-bold">{post.author.name}</h3>
+                <span className="text-sm md:text-base text-gray-400">{formatDateToIndonesian(post.createdAt)}</span>
                 {session?.user.id.toString() === post.author.id && (
                   <TooltipProvider>
                     <Tooltip>

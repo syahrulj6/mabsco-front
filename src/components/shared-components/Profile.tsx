@@ -37,7 +37,7 @@ const Profile = ({ user, games }: any) => {
 
   return (
     <>
-      <div className="flex w-full min-h-screen flex-col px-12 mt-32 md:px-60 md:mt-36">
+      <div className="flex w-full min-h-screen flex-col px-6 mt-32 md:px-60 md:mt-36">
         <div className="flex gap-4 items-center">
           <div className="relative h-16 w-16 md:h-24 md:w-24 -z-10">
             <Image src={user.image} fill alt="logo" className="rounded-full" />
