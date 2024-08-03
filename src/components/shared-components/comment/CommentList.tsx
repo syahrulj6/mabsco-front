@@ -22,7 +22,7 @@ const CommentsList = ({ postId }: { postId: string }) => {
 
   if (isLoading) return <LoadingAnimation />;
   if (error) return <div>Error: {error.message}</div>;
-  if (!comments || comments.length === 0) return <div>No comments found</div>;
+  if (!comments || comments.length === 0) return <div className="text-gray-400">Tidak ada komentar</div>;
 
   if (session && session.user)
     return (

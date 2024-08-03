@@ -16,12 +16,8 @@ const Post = ({ post }: any) => {
           <span className="text-gray-400">{formatDateToIndonesian(post.createdAt)}</span>
         </div>
       </div>
-      <p className="mt-4 text-main text-lg">{post.title}</p>
-      <div className="flex items-center justify-between mt-4 text-gray-400 mb-4">
-        <Link href={`/home/post/${post.id}`} className="flex gap-2 items-center">
-          <FaRegComments className="md:text-2xl text-lg" />
-          <span>Balas</span>
-        </Link>
+      <p className="mt-4 text-main text-lg ">{post.title}</p>
+      <div className="flex justify-end items-center  mt-4 text-gray-400 mb-4">
         <button className="flex gap-2 items-center">
           <CiShare2 className="md:text-2xl text-lg" />
           <span>Share</span>

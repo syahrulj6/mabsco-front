@@ -51,7 +51,12 @@ export async function getAllPost() {
 
 export async function getAllPostByAuthorId(authorId: string) {
   const res = await instance.get(`posts/author/${authorId}`);
-  return res.data;
+  const posts = res.data;
+
+  // Assuming posts have a 'createdAt' field
+  posts.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+  return posts;
 }
 
 export async function getPost(id: string) {

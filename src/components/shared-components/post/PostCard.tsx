@@ -54,10 +54,6 @@ const PostCard = () => {
                     <FaRegComments className="md:text-2xl text-lg" />
                     <span> Balas</span>
                   </Link>
-                  <button className="flex gap-2 items-center">
-                    <CiShare2 className="md:text-2xl text-lg" />
-                    <span>Share</span>
-                  </button>
                 </div>
                 <button className="text-gray-400 hover:text-main transition-colors mt-2" onClick={() => toggleComments(post.id)}>
                   {showComments[post.id] ? `Sembunyikan ${post.comments.length} Balasan` : `Tampilkan ${post.comments.length} Balasan`}

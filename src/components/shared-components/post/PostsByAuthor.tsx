@@ -77,7 +77,7 @@ const PostsByAuthor = ({ authorId }: { authorId: string }) => {
                           <MdDelete className="w-6 h-6 text-red-500 hover:text-red-600 transition-colors duration-150" />
                         </Button>
                       </TooltipTrigger>
-                      <TooltipContent className="bg-red-400">
+                      <TooltipContent className="bg-red-300">
                         <p className="text-red-600">Delete Post</p>
                       </TooltipContent>
                     </Tooltip>
