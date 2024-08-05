@@ -40,7 +40,7 @@ const UserPage = async (props: Props) => {
   const game = queryClient.getQueryData(['game', props.params.id]);
   return (
     <HydrationBoundary state={dehydratedState}>
-      <User user={user} session={session} games={game} />
+      <User user={user} games={game} />
     </HydrationBoundary>
   );
 };

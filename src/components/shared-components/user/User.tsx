@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import PostsByAuthor from '@/components/shared-components/post/PostsByAuthor';
+import { Game } from '@/lib/types';
 
-const User = ({ user, games }: { user: any; games: any[] }) => {
+const User = ({ user, games }: any) => {
   if (!user) {
     return <div className="flex min-h-screen justify-center items-center text-main">User data is not available</div>;
   }
@@ -21,7 +22,7 @@ const User = ({ user, games }: { user: any; games: any[] }) => {
         <h2 className="text-lg md:text-2xl font-bold text-main">Bermain game</h2>
         <div className="flex gap-4 items-center flex-wrap">
           {games &&
-            games.map((game) => (
+            games.map((game: any) => (
               <div key={game.gameId} className="flex items-center gap-4 mb-4">
                 {game.gameTitle === 'VALORANT' && (
                   <div className="relative h-12 w-12 md:h-16 md:w-16">
@@ -30,7 +31,7 @@ const User = ({ user, games }: { user: any; games: any[] }) => {
                 )}
                 {game.gameTitle === 'MOBILE_LEGENDS' && (
                   <div className="relative h-12 w-12 md:h-16 md:w-16">
-                    <Image src="/images/ml-logo.png" fill alt="MOBILE LEGENDS Logo" className="rounded-full object-contain" />
+                    <Image src="/images/ml-logo.jpg" fill alt="MOBILE LEGENDS Logo" className="rounded-full object-contain" />
                   </div>
                 )}
                 {game.gameTitle === 'FREE_FIRE' && (

@@ -5,7 +5,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import React from 'react';
 import { getAllPostByAuthorId, deletePost } from '@/lib/data';
 import LoadingAnimation from '../LoadingAnimation';
-import { formatDateToIndonesian } from '@/lib/Constant';
+import { formatDateToIndonesian } from '@/lib/helper';
 import { Button } from '@/components/ui/button';
 import { MdDelete } from 'react-icons/md';
 import Swal from 'sweetalert2';

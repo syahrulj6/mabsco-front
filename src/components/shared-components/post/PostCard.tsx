@@ -3,10 +3,8 @@
 import { getAllPost } from '@/lib/data';
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
-
-import { formatDateToIndonesian } from '@/lib/Constant';
+import { formatDateToIndonesian } from '@/lib/helper';
 import { FaRegComments } from 'react-icons/fa6';
-import { CiShare2 } from 'react-icons/ci';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import CommentsList from '@/components/shared-components/comment/CommentList';

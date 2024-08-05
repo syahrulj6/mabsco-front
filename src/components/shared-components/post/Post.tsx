@@ -1,4 +1,4 @@
-import { formatDateToIndonesian } from '@/lib/Constant';
+import { formatDateToIndonesian } from '@/lib/helper';
 import Link from 'next/link';
 import React from 'react';
 import { CiShare2 } from 'react-icons/ci';

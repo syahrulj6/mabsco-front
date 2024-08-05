@@ -4,7 +4,7 @@ import { Comment } from '@/lib/types';
 import LoadingAnimation from '@/components/shared-components/LoadingAnimation';
 import { useQuery } from '@tanstack/react-query';
 import { getCommentsByPostId } from '@/lib/data';
-import { formatDateToIndonesian } from '@/lib/Constant';
+import { formatDateToIndonesian } from '@/lib/helper';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
