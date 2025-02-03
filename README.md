@@ -12,7 +12,6 @@
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## 🎮 About Mabsco
 
