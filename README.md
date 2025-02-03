@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Mabsco Frontend
 
-## Getting Started
+Table of Contents
 
-First, run the development server:
+About Mabsco
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Installation
 
-## Learn More
+Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+License
 
-## Deploy on Vercel
+About Mabsco
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Mabsco is a gaming community platform similar to Threads, designed specifically for gamers to create and engage with threads about playing games together, sharing gaming experiences, and discussing gaming-related topics.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Features
+
+📝 Create and post threads
+
+💬 Comment on threads
+
+❤️ Like posts
+
+🚀 User onboarding experience
+
+👤 Profile pages to view user activity
+
+📊 Interactive and engaging UI/UX
+
+Tech Stack
+
+Frontend: Next.js (TypeScript), Tailwind CSS
+
+State and fetch data: Tanstack Query 
+
+Database: PostgreSQL
+
+ORM: Prisma
+
+Authentication: NextAuth.js
+
+API Communication: REST API
+
+Project Structure
+
+mabsco-front/
+├── public/             # Static assets (images, fonts, etc.)
+├── src/
+│   ├── app/            # App Router (if using Next.js 13+)
+│   ├── components/     # Reusable UI components
+│   ├── hooks/          # Custom React hooks
+│   ├── context/        # Global state management
+│   ├── lib/            # Utility functions and configurations
+│   ├── services/       # API service functions
+│   ├── styles/         # Global and component-specific styles
+│   ├── types/          # TypeScript type definitions
+│   ├── utils/          # General helper functions
+│   └── pages/          # Page components (if using Pages Router)
+├── .env.local          # Environment variables
+├── .gitignore          # Git ignore file
+├── next.config.js      # Next.js configuration
+├── package.json        # Project dependencies
+├── README.md           # Project documentation
+└── tsconfig.json       # TypeScript configuration
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/syahrulj6/mabsco-front.git
+cd mabsco-front
+
+Install dependencies:
+
+npm install  # or yarn install
+
+Setup environment variables:
+Create a .env.local file and add necessary environment variables (see the next section).
+
+Environment Variables
+
+Ensure you have the following environment variables set up in your .env.local file:
+
+NEXT_PUBLIC_API_URL=your_backend_api_url
+NEXTAUTH_SECRET=your_secret_key
+NEXTAUTH_URL=http://localhost:3000
+
+Modify as needed based on your backend configuration.
+
+Usage
+
+Start the development server:
+
+npm run dev  # or yarn dev
+
+Open http://localhost:3000 in your browser to see the app in action.
+
+Contributing
+
+Contributions are welcome! If you have any ideas, feel free to open an issue or submit a pull request.
+
+
+🚀 Mabsco - Bringing gamers together! 🎮
