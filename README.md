@@ -1,59 +1,44 @@
-Mabsco Frontend
+# Mabsco Frontend
 
-Table of Contents
+> **Bringing gamers together! 🎮**
 
-About Mabsco
+## 📌 Table of Contents
 
-Features
+- [About Mabsco](#about-mabsco)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Tech Stack
+## 🎮 About Mabsco
 
-Project Structure
+**Mabsco** is a gaming community platform designed for gamers to connect, create threads, and discuss gaming-related topics. Whether you want to team up for a match or share your gaming experiences, Mabsco makes it easier than ever!
 
-Installation
+## 🚀 Features
 
-Environment Variables
+✅ Create and post threads  
+💬 Comment on discussions  
+❤️ Like and engage with posts  
+🛠️ Seamless user onboarding  
+👤 Profile pages for user activity tracking  
+📊 Interactive and dynamic UI/UX  
 
-Usage
+## 🛠️ Tech Stack
 
-Contributing
+- **Frontend:** Next.js (TypeScript), Tailwind CSS
+- **State Management & Data Fetching:** TanStack Query
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **Authentication:** NextAuth.js
+- **API Communication:** REST API
 
-License
+## 📁 Project Structure
 
-About Mabsco
-
-Mabsco is a gaming community platform similar to Threads, designed specifically for gamers to create and engage with threads about playing games together, sharing gaming experiences, and discussing gaming-related topics.
-
-Features
-
-📝 Create and post threads
-
-💬 Comment on threads
-
-❤️ Like posts
-
-🚀 User onboarding experience
-
-👤 Profile pages to view user activity
-
-📊 Interactive and engaging UI/UX
-
-Tech Stack
-
-Frontend: Next.js (TypeScript), Tailwind CSS
-
-State and fetch data: Tanstack Query 
-
-Database: PostgreSQL
-
-ORM: Prisma
-
-Authentication: NextAuth.js
-
-API Communication: REST API
-
-Project Structure
-
+```plaintext
 mabsco-front/
 ├── public/             # Static assets (images, fonts, etc.)
 ├── src/
@@ -73,42 +58,48 @@ mabsco-front/
 ├── package.json        # Project dependencies
 ├── README.md           # Project documentation
 └── tsconfig.json       # TypeScript configuration
+```
 
-Installation
+## ⚙️ Installation
 
-Clone the repository:
-
+1️⃣ **Clone the repository:**
+```sh
 git clone https://github.com/syahrulj6/mabsco-front.git
 cd mabsco-front
+```
 
-Install dependencies:
-
+2️⃣ **Install dependencies:**
+```sh
 npm install  # or yarn install
+```
 
-Setup environment variables:
-Create a .env.local file and add necessary environment variables (see the next section).
+3️⃣ **Setup environment variables:**  
+Create a `.env.local` file and add necessary variables (see the next section).
 
-Environment Variables
+## 🔐 Environment Variables
 
-Ensure you have the following environment variables set up in your .env.local file:
+Ensure the following environment variables are set up in your `.env.local` file:
 
+```sh
 NEXT_PUBLIC_API_URL=your_backend_api_url
 NEXTAUTH_SECRET=your_secret_key
 NEXTAUTH_URL=http://localhost:3000
-
+```
 Modify as needed based on your backend configuration.
 
-Usage
+## ▶️ Usage
 
 Start the development server:
-
+```sh
 npm run dev  # or yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
 
-Open http://localhost:3000 in your browser to see the app in action.
+## 🤝 Contributing
 
-Contributing
+We welcome contributions! 🚀  
+If you have ideas for improvement, feel free to open an **issue** or submit a **pull request**.
 
-Contributions are welcome! If you have any ideas, feel free to open an issue or submit a pull request.
+---
+**Mabsco - The Ultimate Gaming Hub! 🎮🔥**
 
-
-🚀 Mabsco - Bringing gamers together! 🎮
